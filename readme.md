@@ -1,6 +1,8 @@
 # teams-presence-mqtt
 This app connects to the Microsoft Graph API using an Azure AD app registration. After signing in to grant the application a user-delegated access token, the app queries the Graph API every 1 second to read the presence data of the first logged in user, and push it to  two MQTT topics: 
+
 ``home/teamspresence/<aad_uid>/availability``
+
 ``home/teamspresence/<aad_uid>/activity``
 
 
@@ -13,15 +15,25 @@ An AAD app registration with the `Presence.Read` permission granted, and a retur
 ### Usage (on Ubuntu):
 
 Clone the repo. 
+
 Install docker-compose
+
 `apt-get install docker-compose`
+
 Copy `.env.example` to `.env` and fill in the required fields. 
+
 Build the images
+
 `docker-compose build`
+
 Run the app: 
+
 `docker-compose up`
+
 Check the logs for any errors. Browse to ``https://teamsmqtt.home:3443/`` and log in. You should then see some mqtt messages start to arrive! 
+
 If all is well, you can start the service in the background with 
+
 ``docker-compose up -d``
 
 ### Further notes
