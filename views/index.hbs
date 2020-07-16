@@ -1,0 +1,16 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <IndexSnippet> -->
+<div class="jumbotron">
+  <h1>Teams MQTT Bridge</h1>
+  <p class="lead">This app will query the Microsoft Graph API for your Teams presence info and update an MQTT server.</p>
+  {{#if user}}
+    <h4>Welcome {{ user.displayName }}!</h4>
+    {{!-- <h4>Access token: {{ token }}</h4> --}}
+    <p>You are signed in.</p>
+  {{else}}
+    <a href="/auth/signin" class="btn btn-primary btn-large">Click here to sign in</a>
+  {{/if}}
+</div>
+<!-- </IndexSnippet> -->

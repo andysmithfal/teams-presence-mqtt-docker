@@ -1,0 +1,21 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <IndexSnippet> -->
+<div class="jumbotron">
+  <h1>Teams MQTT Bridge</h1>
+  {{#if user}}
+    <h3>You are now signed in as {{ user.displayName }}</h3>
+    {{!-- <h4>Access token: {{ token }}</h4> --}}
+    <p>This window will now close...</p>
+    <script>
+        setTimeout(function(){
+            window.close();
+        },3000)
+    </script>
+  {{else}}
+    <h3>Something went wrong signing you in - try again:</h3>
+    <a href="/auth/signin" class="btn btn-primary btn-large">Click here to sign in</a>
+  {{/if}}
+</div>
+<!-- </IndexSnippet> -->
